@@ -41,6 +41,22 @@ export class PCA {
     this.power_iteration_normalizer = power_iteration_normalizer;
     this.random_state = random_state;
   }
+
+  /**
+   * Fit the model with X
+   * @param X array-like of shape (n_samples, n_features)
+            Training data, where `n_samples` is the number of samples
+            and `n_features` is the number of features.
+   * @param y Ignored
+            Ignored.
+   * @returns object Returns the instance itself 
+   */
+  public fit(X: any[], y = null) {
+    this._fit(X);
+    return this;
+  }
+
+  private _fit(X: any[]) {}
 }
 
 export default PCA;
